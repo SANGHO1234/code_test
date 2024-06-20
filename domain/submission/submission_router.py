@@ -82,12 +82,12 @@ def fetch_new(request: Request, _db: Session = Depends(get_db)):
 
     BASE_DIR = Path(__file__).resolve().parent.parent.parent
     CODE_PATH = os.path.join(BASE_DIR, f'submission_codes/{submission.id}.py')
-    print('CODE_PATH >>>>>>>>>>>>>>>>>>', CODE_PATH)
+    
 
     # ftp id.py 송신
     session = ftplib.FTP()
-    session.connect('172.30.1.13', 21) # 두 번째 인자는 port number
-    session.login("ftpuser", "1111")   # FTP 서버에 접속
+    session.connect('0.0.0.0', 21) # 두 번째 인자는 port number
+    session.login("test", "test")   # FTP 서버에 접속
     
     uploadfile = open(CODE_PATH, mode='rb') #업로드할 파일 open
     session.encoding='utf-8'
