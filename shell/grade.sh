@@ -28,4 +28,4 @@ fi
 
 echo ${id}, ${status}
 
-curl -X PATCH -H "content-type: application/json" -d '{"id": '$id', "status": "'"$status"'"}' "http://172.30.1.10:8000/submission"
+curl -X PATCH -H "content-type: application/json" -d '{"id": '$id', "status": "'"$status"'"}' "http://0.0.0.0:8000/submission"
