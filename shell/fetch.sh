@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export SUBMISSION_ID=$(curl -X GET "http://172.30.1.10:8000/new")
+export SUBMISSION_ID=$(curl -X GET "http://0.0.0.0:8000/new")
